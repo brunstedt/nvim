@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["barbar.nvim"] = {
-    loaded = true,
-    path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/barbar.nvim",
-    url = "https://github.com/romgrk/barbar.nvim"
-  },
   catppuccin = {
     loaded = true,
     path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -123,7 +118,12 @@ _G.packer_plugins = {
   harpoon = {
     loaded = true,
     path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/harpoon",
-    url = "https://github.com/theprimeagen/harpoon"
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["harpoon-lualine"] = {
+    loaded = true,
+    path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/harpoon-lualine",
+    url = "https://github.com/letieu/harpoon-lualine"
   },
   kanagawa = {
     loaded = true,
@@ -183,6 +183,11 @@ _G.packer_plugins = {
     path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-surround"] = {
+    loaded = true,
+    path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -213,10 +218,20 @@ _G.packer_plugins = {
     path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["typescript-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/typescript-tools.nvim",
+    url = "https://github.com/pmizio/typescript-tools.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
   },
   ["vim-signify"] = {
     loaded = true,

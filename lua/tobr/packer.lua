@@ -5,7 +5,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
-
+	use { 'nvim-lua/plenary.nvim' }
 	use {
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.6',
@@ -14,11 +14,18 @@ return require('packer').startup(function(use)
 	use { "catppuccin/nvim", as = "catppuccin" }
 	use { "rebelot/kanagawa.nvim", as = "kanagawa" }
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-	use('theprimeagen/harpoon')
+	use {
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		requires = { { "nvim-lua/plenary.nvim" } }
+	}
+	use {
+		'letieu/harpoon-lualine',
+		opt = false,
+		requires = { { 'ThePrimeagen/harpoon' } }
+	}
 	use('mbbill/undotree')
-
 	use("nvim-tree/nvim-web-devicons")
-
 	use {
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
@@ -34,6 +41,12 @@ return require('packer').startup(function(use)
 		config = function()
 			require("nvim-autopairs").setup {}
 		end
+	}
+	use {
+		"L3MON4D3/LuaSnip",
+		tag = "v2.*",
+		run = "make install_jsregexp",
+		dependencies = { "rafamadriz/friendly-snippets" }
 	}
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -71,5 +84,9 @@ return require('packer').startup(function(use)
 		end,
 		requires = { 'nvim-tree/nvim-web-devicons' }
 	}
-	use('romgrk/barbar.nvim')
+	use { "kylechui/nvim-surround", tag = "*" }
+	use { "tpope/vim-commentary" }
+	use { "pmizio/typescript-tools.nvim",
+		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	}
 end)

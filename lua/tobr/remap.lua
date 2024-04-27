@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 vim.keymap.set('n', 'gt', '<cmd>tab split | lua vim.lsp.buf.definition()<CR>', {})
 
 -- save
-vim.keymap.set({ 'n' }, '<C-s>', '<cmd> w <CR>')
+-- vim.keymap.set({ 'n' }, '<C-s>', '<cmd> w <CR>')
 
 -- Add empty lines before and after cursor line
 vim.keymap.set('n', 'gO', "<Cmd>call append(line('.') - 1, repeat([''], v:count1))<CR>")
