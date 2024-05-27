@@ -11,8 +11,6 @@ return require('packer').startup(function(use)
 		tag = '0.1.6',
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
-	use { "catppuccin/nvim", as = "catppuccin" }
-	use { "rebelot/kanagawa.nvim", as = "kanagawa" }
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 	use {
 		"ThePrimeagen/harpoon",
@@ -34,7 +32,9 @@ return require('packer').startup(function(use)
 			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
 			"MunifTanjim/nui.nvim", }
 	}
-	use { 'nvim-lualine/lualine.nvim' }
+	use { 'nvim-lualine/lualine.nvim',
+		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+	}
 	use {
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
@@ -89,4 +89,22 @@ return require('packer').startup(function(use)
 	use { "pmizio/typescript-tools.nvim",
 		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 	}
-end)
+	use {
+		"folke/which-key.nvim",
+		config = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end
+	}
+	use { 'christoomey/vim-tmux-navigator' }
+	use { 'Asheq/close-buffers.vim' }
+	use { "OlegGulevskyy/better-ts-errors.nvim",
+		requires = { "MunifTanjim/nui.nvim" }
+	}
+	-- Themes ---
+	use { "scottmckendry/cyberdream.nvim", as = "cyberdream" }
+	use { "catppuccin/nvim", as = "catppuccin" }
+	use { "rebelot/kanagawa.nvim", as = "kanagawa" }
+	use { "diegoulloao/neofusion.nvim", as = "neofusion" }
+end
+)

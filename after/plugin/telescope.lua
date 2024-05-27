@@ -7,6 +7,7 @@ telescope.setup {
 			i = {
 				["<C-j>"] = "move_selection_next",
 				["<C-k>"] = "move_selection_previous",
+				['<C-d>'] = require('telescope.actions').delete_buffer
 				--				["<C-a>"] = require 'telescope'.extensions.send_to_harpoon.actions.send_selected_to_harpoon
 			}
 		}

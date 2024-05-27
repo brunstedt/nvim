@@ -79,10 +79,20 @@ _G.packer_plugins = {
     path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["better-ts-errors.nvim"] = {
+    loaded = true,
+    path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/better-ts-errors.nvim",
+    url = "https://github.com/OlegGulevskyy/better-ts-errors.nvim"
+  },
   catppuccin = {
     loaded = true,
     path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
+  },
+  ["close-buffers.vim"] = {
+    loaded = true,
+    path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/close-buffers.vim",
+    url = "https://github.com/Asheq/close-buffers.vim"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
@@ -101,6 +111,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/copilot.lua",
     url = "https://github.com/zbirenbaum/copilot.lua"
+  },
+  cyberdream = {
+    loaded = true,
+    path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/cyberdream",
+    url = "https://github.com/scottmckendry/cyberdream.nvim"
   },
   ["dashboard-nvim"] = {
     config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14dashboard\frequire\0" },
@@ -159,6 +174,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+  },
+  newfusion = {
+    loaded = true,
+    path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/newfusion",
+    url = "https://github.com/diegoulloao/neofusion.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
@@ -237,10 +257,25 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/vim-signify",
     url = "https://github.com/mhinz/vim-signify"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["which-key.nvim"] = {
+    config = { "\27LJ\2\nD\0\0\2\0\4\0\t6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0K\0\1\0\15timeoutlen\ftimeout\6o\bvim\0" },
+    loaded = true,
+    path = "/Users/tonybrunstedt/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\nD\0\0\2\0\4\0\t6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0K\0\1\0\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd copilot.lua ]]
