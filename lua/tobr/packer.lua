@@ -98,9 +98,12 @@ return require('packer').startup(function(use)
 	}
 	use { 'christoomey/vim-tmux-navigator' }
 	use { 'Asheq/close-buffers.vim' }
+	use { 'stevearc/conform.nvim' }
 	use { "OlegGulevskyy/better-ts-errors.nvim",
 		requires = { "MunifTanjim/nui.nvim" }
 	}
+	use { "xiyaowong/transparent.nvim" }
+
 	-- Themes ---
 	use { "scottmckendry/cyberdream.nvim", as = "cyberdream" }
 	use { "catppuccin/nvim", as = "catppuccin" }
